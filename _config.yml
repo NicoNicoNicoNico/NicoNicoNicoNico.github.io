@@ -6,9 +6,11 @@
 title: Hexo
 subtitle:
 description:
-author: John Doe
-language:
+author: clover
+language: zh-Hans
+avatar: /images/avatar.jpeg
 timezone:
+duoshuo_shortname: NicoNicoNicoNico
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -63,7 +65,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
