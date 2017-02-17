@@ -53,6 +53,8 @@
             <a href="javascript:;" class="st-search-show-outputs">
           {% elseif config.search || theme.algolia_search.enable %}
             <a href="javascript:;" class="popup-trigger">
+          {% elseif theme.algolia %}
+            <a href="javascript:;" class="popup-trigger">
           {% endif %}
             {% if theme.menu_icons.enable %}
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />

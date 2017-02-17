@@ -13,10 +13,11 @@ timezone:
 duoshuo_shortname: NicoNicoNicoNico
 
 # URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+## If your site is put in a subdirectory, set url as 'http://NicoNicoNicoNico.com/child' and root as '/child/'
+url: http://NicoNicoNicoNico.github.io
 root: /
-permalink: :year/:month/:day/:title/
+#permalink: :year/:month/:day/:title/
+permalink: :title.html
 permalink_defaults:
 
 # Directory
@@ -69,6 +70,11 @@ algolia:
   adminApiKey: '4e531cacb161d096128ce31f6a6dbdff'
   indexName: 'clover'
   chunkSize: 5000
+  fields:
+    - title
+    - slug
+    - path
+    - content:strip
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
