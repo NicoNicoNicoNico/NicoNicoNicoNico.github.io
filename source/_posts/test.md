@@ -186,6 +186,7 @@ algolia:
 
 ```var storedPost = _.pick(data, ['title', 'date', 'slug', 'path', 'content', 'excerpt', 'objectID']);```
 
+我还全局把'yourname'这个词替换成了自己的git名字……  
 改完之后再`hexo algolia`  
 我按照别人的方法，如此尝试了多次才得以成功。
 
