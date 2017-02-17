@@ -7,14 +7,14 @@ tags: hexo
 话说开始写我这个站上第一篇博客了，好紧脏。  
 搭建这个网站可以说是踩坑无数，来 让我们来一起慢慢填坑。
 
-#建立博客
-##建立github相应的仓库
+# 建立博客
+## 建立github相应的仓库
 建立这个博客的时候，关于git的坑踩了特别多。这个放到接下来一篇来写。  
 首先我们在git上建立一个仓库，名字为yourname.github.io
 ![](http://i1.piimg.com/567571/081bbc5e8c3b39a4.png)
 填好名字确认之后，我们的博客空间就已经建立了。
 <!-- more -->
-##hexo初步搭建
+## hexo初步搭建
 安装了node.js之后，在你相应的根目录下执行下面代码来安装hexo
 > npm install -g hexo
 
@@ -50,8 +50,8 @@ mac旁友，记得.gitnore处理掉.DS_Store这个烦人的家伙。
 [http://mrkou47.github.io/2016/04/01/setting-blog/](http://mrkou47.github.io/2016/04/01/setting-blog/)   
 [http://blog.sina.com.cn/s/blog_617ccc0c0101h84p.html](http://blog.sina.com.cn/s/blog_617ccc0c0101h84p.html)
 
-#主题next
-##安装主题next
+# 主题next
+## 安装主题next
 [next主题github地址](https://github.com/iissnan/hexo-theme-next) / 
 [next主题使用文档](http://theme-next.iissnan.com/)  
 
