@@ -87,12 +87,24 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://NicoNicoNicoNico.github.io/index.html">
+<meta name="description" content="npm安装错误
+这是一个权限问题，由Tim Schaub提供的修复是递归地将/ usr / local文件夹中的文件所有者更改为当前用户：
+sudo chown -R $USER /usr/local">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git踩坑全记录">
+<meta property="og:url" content="http://NicoNicoNicoNico.github.io/git.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="npm安装错误
+这是一个权限问题，由Tim Schaub提供的修复是递归地将/ usr / local文件夹中的文件所有者更改为当前用户：
+sudo chown -R $USER /usr/local">
+<meta property="og:image" content="http://i1.piimg.com/567571/1e5edf20962813cd.png">
+<meta property="og:updated_time" content="2017-03-02T08:29:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="git踩坑全记录">
+<meta name="twitter:description" content="npm安装错误
+这是一个权限问题，由Tim Schaub提供的修复是递归地将/ usr / local文件夹中的文件所有者更改为当前用户：
+sudo chown -R $USER /usr/local">
+<meta name="twitter:image" content="http://i1.piimg.com/567571/1e5edf20962813cd.png">
 
 
 
@@ -120,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://NicoNicoNicoNico.github.io/"/>
+  <link rel="canonical" href="http://NicoNicoNicoNico.github.io/git.html"/>
 
 
 
 
 
-  <title> Hexo </title>
+  <title> git踩坑全记录 | Hexo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -151,9 +163,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -272,9 +282,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -307,10 +317,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/git.html" itemprop="url">
-                  git踩坑全记录
-                </a>
+                git踩坑全记录
               
             
           </h1>
@@ -371,26 +378,50 @@
       
 
       
-        
-          <h1 id="npm安装错误"><a href="#npm安装错误" class="headerlink" title="npm安装错误"></a>npm安装错误</h1><p><img src="http://i1.piimg.com/567571/1e5edf20962813cd.png" alt=""></p>
+        <h1 id="npm安装错误"><a href="#npm安装错误" class="headerlink" title="npm安装错误"></a>npm安装错误</h1><p><img src="http://i1.piimg.com/567571/1e5edf20962813cd.png" alt=""></p>
 <p>这是一个权限问题，由Tim Schaub提供的修复是递归地将/ usr / local文件夹中的文件所有者更改为当前用户：</p>
 <p><code>sudo chown -R $USER /usr/local</code></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/git.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<a id="more"></a>
+<p>链接<a href="https://ar.al/scribbles/npm-install-g-please-try-running-this-command-again-as-root-administrator/" target="_blank" rel="external">https://ar.al/scribbles/npm-install-g-please-try-running-this-command-again-as-root-administrator/</a>   </p>
+<h2 id="fatal-Not-a-git-repository-or-any-of-the-parent-directories-git"><a href="#fatal-Not-a-git-repository-or-any-of-the-parent-directories-git" class="headerlink" title="fatal: Not a git repository (or any of the parent directories): .git"></a>fatal: Not a git repository (or any of the parent directories): .git</h2><p>提示说没有.git这样一个目录 ——&gt;  <code>git init</code></p>
+<h2 id="git-push-的时候说failed-to-push-some-refs-to-‘xxxxx’"><a href="#git-push-的时候说failed-to-push-some-refs-to-‘xxxxx’" class="headerlink" title="git push 的时候说failed to push some refs to ‘xxxxx’"></a>git push 的时候说failed to push some refs to ‘xxxxx’</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">To git@192.168.1.48:xxxxgit</div><div class="line"></div><div class="line"> ! [rejected]        master -&gt; master (non-fast-forward)</div><div class="line"></div><div class="line">error: failed to push some refs to &apos;git@192.168.1.48:xxxx.git&apos;</div><div class="line">To prevent you from losing history, non-fast-forward updates were rejected</div><div class="line">Merge the remote changes (e.g. &apos;git pull&apos;) before pushing again.  See the</div><div class="line">&apos;Note about fast-forwards&apos; section of &apos;git push --help&apos; for details.</div></pre></td></tr></table></figure>
+<p>在<code>.git/config</code>中缺少以下两句，加上就可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[branch &quot;master&quot;]</div><div class="line">      remote = origin</div><div class="line">      merge = refs/heads/master</div></pre></td></tr></table></figure>
+<p>链接 <a href="http://blog.csdn.net/huguohu2006/article/details/7045052" target="_blank" rel="external">git使用常见问题</a> </p>
+<h2 id="permission-denied"><a href="#permission-denied" class="headerlink" title="permission denied"></a>permission denied</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Initialized empty Git repository in `/Users/username/Documents/cakebook/.git/`</div><div class="line">Permission denied (publickey).</div><div class="line">fatal: The remote end hung up unexpectedly</div></pre></td></tr></table></figure>
+<p>ssh出问题了吧</p>
+<ul>
+<li><p>先找到并打开你放ssh的文件夹,终端运行<br><code>cd ~/.ssh &amp;&amp; ssh-keygen</code></p>
+</li>
+<li><p>运行:</p>
+</li>
+</ul>
+<p>On OS X run: <code>cat id_rsa.pub | pbcopy</code></p>
+<p>On Linux run: <code>cat id_rsa.pub | xclip</code></p>
+<p>On Windows (via Cygwin/Git Bash) run: <code>cat id_rsa.pub | clip</code></p>
+<ul>
+<li>去网站（git）添加ssh.</li>
+<li>.gitconfig.<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;bob&quot;</div><div class="line">git config --global user.email bob@...</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>(别忘了重启命令行来确定配置重新加载)</p>
+<p>链接 <a href="http://stackoverflow.com/questions/2643502/git-permission-denied-publickey" target="_blank" rel="external">http://stackoverflow.com/questions/2643502/git-permission-denied-publickey</a></p>
+<h2 id="md编辑"><a href="#md编辑" class="headerlink" title="md编辑"></a>md编辑</h2><p>不废话到只放个链接<br><a href="http://www.tuicool.com/articles/fmeMbqR" target="_blank" rel="external">Markdown，你只需要掌握这几个</a></p>
+
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -399,157 +430,38 @@
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://NicoNicoNicoNico.github.io/test.html">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="clover">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.jpeg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Hexo">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Hexo" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/test.html" rel="next" title="github-pages + hexo ＋ next主题的建博全记录">
+                <i class="fa fa-chevron-left"></i> github-pages + hexo ＋ next主题的建博全记录
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/test.html" itemprop="url">
-                  github-pages + hexo ＋ next主题的建博全记录
-                </a>
-              
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T11:24:11+08:00">
-                2017-02-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/test.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="test.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>话说开始写我这个站上第一篇博客了，好紧脏。<br>搭建这个网站可以说是踩坑无数，来 让我们来一起慢慢填坑。</p>
-<h1 id="建立博客"><a href="#建立博客" class="headerlink" title="建立博客"></a>建立博客</h1><h2 id="建立github相应的仓库"><a href="#建立github相应的仓库" class="headerlink" title="建立github相应的仓库"></a>建立github相应的仓库</h2><p>建立这个博客的时候，关于git的坑踩了特别多。这个放到接下来一篇来写。<br>首先我们在git上建立一个仓库，名字为yourname.github.io<br><img src="http://i1.piimg.com/567571/081bbc5e8c3b39a4.png" alt=""><br>填好名字确认之后，我们的博客空间就已经建立了。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/test.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -557,6 +469,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="git.html"
+           data-title="git踩坑全记录" data-url="http://NicoNicoNicoNico.github.io/git.html">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -576,8 +496,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpeg"
@@ -637,6 +566,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#npm安装错误"><span class="nav-number">1.</span> <span class="nav-text">npm安装错误</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#fatal-Not-a-git-repository-or-any-of-the-parent-directories-git"><span class="nav-number">1.1.</span> <span class="nav-text">fatal: Not a git repository (or any of the parent directories): .git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-push-的时候说failed-to-push-some-refs-to-‘xxxxx’"><span class="nav-number">1.2.</span> <span class="nav-text">git push 的时候说failed to push some refs to ‘xxxxx’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#permission-denied"><span class="nav-number">1.3.</span> <span class="nav-text">permission denied</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#md编辑"><span class="nav-number">1.4.</span> <span class="nav-text">md编辑</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
@@ -736,6 +681,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
