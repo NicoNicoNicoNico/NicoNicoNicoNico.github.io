@@ -65,9 +65,9 @@ pagination_dir: page
 
 #algolia
 algolia:
-  applicationID: 'LNKLT4KZWO'
-  apiKey: 'fca33b8e850186e782f01e4e7bf0cb6b'
-  adminApiKey: '4e531cacb161d096128ce31f6a6dbdff'
+  applicationID: 'ATHUOIDVMQ'
+  apiKey: '578e639dc3b8b45411d4d0800ca954f3'
+  adminApiKey: '5d99c084c7fa652ec0d9521aae54c17f'
   indexName: 'clover'
   chunkSize: 5000
   fields:
